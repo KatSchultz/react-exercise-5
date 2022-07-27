@@ -51,6 +51,7 @@ function ArraysEx() {
 
   return (
     <section>
+      <h1>Exercise 5</h1>
       <div className="color-list">
         <h2>Colors</h2>
         <ol>

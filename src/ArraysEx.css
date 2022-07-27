@@ -1,7 +1,12 @@
 section {
   margin-left: 10px;
 }
-
+h1 {
+  font-size: 1.5em;
+}
+h2 {
+  font-size: 1.25em;
+}
 button {
   border: none;
   border-radius: 8px;
@@ -35,6 +40,6 @@ td {
 }
 
 .btn-delete {
-  background-image: linear-gradient(to left, blue, indigo);
+  background-image: linear-gradient(to left, violet, indigo);
   color: white;
 }

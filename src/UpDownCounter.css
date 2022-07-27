@@ -1,0 +1,15 @@
+.count-container {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  border-radius: 4px;
+  width: 120px;
+  padding: 20px;
+  align-items: center;
+}
+
+.up,
+.down {
+  background-color: white;
+  border: 1px solid black;
+}
