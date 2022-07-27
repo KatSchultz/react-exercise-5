@@ -9,12 +9,12 @@ function App() {
   return (
     <section>
       <ArraysEx />
-      <PetInfo />
+      {/* <PetInfo />
       <div className="counters">
         <UpDownCounter />
         <UpDownCounter />
         <UpDownCounter />
-      </div>
+      </div> */}
     </section>
   );
 }
