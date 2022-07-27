@@ -25,6 +25,11 @@ function ArraysEx() {
       type: "Fish",
       id: 3,
     },
+    {
+      name: "Watson",
+      type: "cat",
+      id: 4,
+    },
   ]);
 
   const [colors, setColors] = useState([
@@ -37,11 +42,11 @@ function ArraysEx() {
   ]);
 
   function addColor(color: string): void {
-    setColors((prev) => [...colors, color]);
+    setColors([...colors, color]);
   }
 
-  function deletePet(name: string) {
-    let index = pets.findIndex((pet) => pet.name === name);
+  function deletePet(id: number) {
+    let index = pets.findIndex((pet) => pet.id === id);
     setPets((prev) => {
       const newList = prev.slice(0);
       newList.splice(index, 1);
@@ -83,25 +88,29 @@ function ArraysEx() {
       <div className="pet-table">
         <h2>Pets</h2>
         <table>
-          <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Action</th>
-          </tr>
-          {pets.map((pet) => (
-            <tr key={pet.id}>
-              <td>{pet.name}</td>
-              <td>{pet.type}</td>
-              <td>
-                <button
-                  className="btn-delete"
-                  onClick={() => deletePet(pet.name)}
-                >
-                  Delete
-                </button>
-              </td>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Action</th>
             </tr>
-          ))}
+          </thead>
+          <tbody>
+            {pets.map((pet) => (
+              <tr key={pet.id}>
+                <td>{pet.name}</td>
+                <td>{pet.type}</td>
+                <td>
+                  <button
+                    className="btn-delete"
+                    onClick={() => deletePet(pet.id)}
+                  >
+                    Delete
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
         </table>
       </div>
     </section>
